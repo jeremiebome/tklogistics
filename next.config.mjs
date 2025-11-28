@@ -1,11 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  typescript: {
-    ignoreBuildErrors: true,
-  },
+  output: 'export',        // important : exporter en HTML statique
+  basePath: '',            // si ton site est à la racine du repo
   images: {
-    unoptimized: true,
+    unoptimized: true,     // Next.js ne peut pas optimiser sur Github Pages
   },
-}
+};
 
-export default nextConfig
+export default nextConfig;
